@@ -1,0 +1,923 @@
+@font-face {
+  font-family: 'AvenirNext';
+  src: url("../fonts/AvenirNext-Regular.ttf") format("truetype");
+}
+/* line 12, ../scss/_settings.scss */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 21, ../scss/_settings.scss */
+section#main, section#main .wr, section#main .box, section#about, section#about .wr, section#about .wr .box, section#services, section#services .wr, section#ourproduct, section#ourproduct .wr, section#ourproduct .wr box, section#ourlab, section#ourlab .wr, section#ourlab .wr box, section#ourlab .wr box box, section#contacts, section#contacts row, section#contacts row box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 27, ../scss/_settings.scss */
+section#main .wr .header .menu ul, .headhesive .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* line 35, ../scss/_settings.scss */
+.wr {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px;
+}
+
+/* line 43, ../scss/_settings.scss */
+a {
+  font-family: "AvenirNext", sans-serif;
+  font-size: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 52, ../scss/_settings.scss */
+a:hover {
+  color: #7da80a;
+  text-decoration: underline;
+}
+
+/* line 58, ../scss/_settings.scss */
+h1 {
+  font-family: "AvenirNext", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #7da80a;
+  text-align: center;
+}
+
+/* line 67, ../scss/_settings.scss */
+h1::after {
+  content: " ";
+  display: block;
+  width: 480px;
+  height: 1px;
+  background: #7da80a;
+}
+
+/* line 76, ../scss/_settings.scss */
+h2, h3 {
+  font-family: "AvenirNext", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: #7da80a;
+  text-align: none;
+}
+
+/* line 84, ../scss/_settings.scss */
+h2::after, h3::after {
+  content: " ";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background: #7da80a;
+}
+
+/* line 92, ../scss/_settings.scss */
+h3 {
+  font-size: 17px;
+  font-weight: 00;
+  color: black;
+}
+
+/* line 100, ../scss/_settings.scss */
+h3::after {
+  width: 0;
+}
+
+/* line 105, ../scss/_settings.scss */
+p {
+  font-family: "AvenirNext", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: black;
+}
+
+/* line 113, ../scss/_settings.scss */
+.btn, .btn2 {
+  font-family: "AvenirNext", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 00;
+  color: white;
+  background-color: #7da80a;
+  border-radius: 90px;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  text-align: center;
+  border: 0px;
+  cursor: pointer;
+}
+
+/* line 128, ../scss/_settings.scss */
+.btn:hover, .btn2:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 135, ../scss/_settings.scss */
+.btn2 {
+  color: #7da80a;
+  border: 1px solid #7da80a;
+  background-color: transparent;
+}
+
+/* line 142, ../scss/_settings.scss */
+.btn2:hover {
+  color: #7da80a;
+}
+
+/* line 7, ../scss/style.scss */
+.popup {
+  display: none;
+  width: 100%;
+  height: 0px;
+  z-index: 100;
+  position: absolute;
+  margin: auto;
+  justify-content: center;
+}
+/* line 15, ../scss/style.scss */
+.popup .content {
+  width: 960px;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+/* line 24, ../scss/style.scss */
+.popup .content h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0px 16px 0px;
+}
+/* line 30, ../scss/style.scss */
+.popup .content h1::after {
+  height: 6px;
+  width: 80%;
+  height: 4px;
+  margin-top: 10px;
+  background: rgba(125, 168, 10, 0.6);
+}
+/* line 37, ../scss/style.scss */
+.popup .content .hide {
+  position: inherit;
+  align-self: flex-end;
+  cursor: pointer;
+  background: url(../img/cross.png);
+  width: 20px;
+  min-height: 20px;
+  background-size: cover;
+  margin: 7px;
+}
+/* line 47, ../scss/style.scss */
+.popup .content box {
+  width: 80%;
+  margin: auto;
+  height: 85%;
+  overflow: auto;
+  padding-right: 80px;
+  margin-left: 93px;
+  margin-bottom: 30px;
+}
+
+/* line 60, ../scss/style.scss */
+.overlay {
+  background: rgba(0, 0, 0, 0.67);
+  position: fixed;
+  z-index: 99;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 72, ../scss/style.scss */
+section#main {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* line 78, ../scss/style.scss */
+section#main #logo {
+  position: absolute;
+  padding: 50px;
+  width: 140px;
+}
+/* line 83, ../scss/style.scss */
+section#main .wr {
+  padding: 0;
+  height: 0;
+}
+/* line 87, ../scss/style.scss */
+section#main .wr .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+/* line 97, ../scss/style.scss */
+section#main .wr .header .menu ul li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 105, ../scss/style.scss */
+section#main .box {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: auto;
+  flex-wrap: nowrap;
+}
+/* line 112, ../scss/style.scss */
+section#main .box .content {
+  display: flex;
+  font-family: "AvenirNext", sans-serif;
+  color: white;
+  font-size: 24px;
+  text-align: right;
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+/* line 121, ../scss/style.scss */
+section#main .box img {
+  min-width: 200px;
+  width: 47%;
+}
+
+/* line 128, ../scss/style.scss */
+section#about {
+  background: #f8f8f8;
+}
+/* line 131, ../scss/style.scss */
+section#about .wr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* line 137, ../scss/style.scss */
+section#about .wr .box {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+/* line 147, ../scss/style.scss */
+section#services {
+  height: 100vh;
+}
+/* line 150, ../scss/style.scss */
+section#services .wr {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+/* line 156, ../scss/style.scss */
+section#services .wr h1 {
+  text-align: center;
+  margin: 0;
+}
+/* line 160, ../scss/style.scss */
+section#services .wr box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+/* line 166, ../scss/style.scss */
+section#services .wr box img {
+  width: 310px;
+}
+/* line 170, ../scss/style.scss */
+section#services .wr box ul {
+  width: 450px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* line 176, ../scss/style.scss */
+section#services .wr box ul li {
+  padding-bottom: 40px;
+}
+/* line 179, ../scss/style.scss */
+section#services .wr box ul li:last-child {
+  padding: 0;
+}
+
+/* line 187, ../scss/style.scss */
+section#ourproduct {
+  background-color: #f8f8f8;
+}
+/* line 190, ../scss/style.scss */
+section#ourproduct .wr {
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+/* line 197, ../scss/style.scss */
+section#ourproduct .wr box {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+/* line 203, ../scss/style.scss */
+section#ourproduct .wr box .item {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 207, ../scss/style.scss */
+section#ourproduct .wr box .item img {
+  margin: auto;
+  display: flex;
+  height: 135px;
+}
+/* line 212, ../scss/style.scss */
+section#ourproduct .wr box .item .btn2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+/* line 224, ../scss/style.scss */
+section#ourlab .wr {
+  flex-direction: column;
+  align-items: center;
+}
+/* line 228, ../scss/style.scss */
+section#ourlab .wr box {
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+/* line 232, ../scss/style.scss */
+section#ourlab .wr box box {
+  width: 50%;
+  align-items: center;
+  min-width: 580px;
+  justify-content: flex-start;
+}
+
+/* line 243, ../scss/style.scss */
+section#contacts {
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+/* line 248, ../scss/style.scss */
+section#contacts .btn, section#contacts .btn2 {
+  margin-top: 20px;
+}
+/* line 251, ../scss/style.scss */
+section#contacts map {
+  width: 100%;
+}
+/* line 253, ../scss/style.scss */
+section#contacts map iframe {
+  border: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 500px;
+}
+/* line 260, ../scss/style.scss */
+section#contacts row {
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 264, ../scss/style.scss */
+section#contacts row box {
+  width: 50%;
+}
+/* line 267, ../scss/style.scss */
+section#contacts row box h3 {
+  width: 100%;
+}
+/* line 270, ../scss/style.scss */
+section#contacts row box .item {
+  width: 50%;
+}
+/* line 276, ../scss/style.scss */
+section#contacts #PopupWriteUs .content {
+  height: 560px;
+}
+/* line 279, ../scss/style.scss */
+section#contacts #PopupWriteUs .content box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 283, ../scss/style.scss */
+section#contacts #PopupWriteUs .content box form .input {
+  border: 1px solid rgba(125, 168, 10, 0.6);
+  border-radius: 15px;
+  margin: 5px;
+  width: 98%;
+  padding: 6px;
+  font-family: "AvenirNext", sans-serif;
+}
+/* line 291, ../scss/style.scss */
+section#contacts #PopupWriteUs .content box form #text {
+  resize: none;
+}
+
+/* line 301, ../scss/style.scss */
+::-webkit-scrollbar {
+  width: 5px;
+  padding-right: 10px;
+}
+
+/* line 306, ../scss/style.scss */
+::-moz-scrollbar {
+  width: 5px;
+  padding-right: 10px;
+}
+
+/* Track */
+/* line 314, ../scss/style.scss */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 319, ../scss/style.scss */
+::-moz-scrollbar-track {
+  border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Handle */
+/* line 327, ../scss/style.scss */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border-radius: 20px;
+  background: rgba(125, 168, 10, 0.6);
+}
+
+/* line 333, ../scss/style.scss */
+::-moz-scrollbar-thumb {
+  border-radius: 20px;
+  border-radius: 20px;
+  background: rgba(125, 168, 10, 0.6);
+}
+
+/* line 340, ../scss/style.scss */
+.headhesive {
+  transition: 1s;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin: auto;
+  position: fixed;
+  z-index: 99;
+  transform: translateY(-50px);
+}
+/* line 351, ../scss/style.scss */
+.headhesive .menu {
+  display: none;
+  height: 100%;
+  align-items: center;
+  background-color: #7da80a;
+  border-radius: 0px 0px 20px 20px;
+  width: 960px;
+  justify-content: center;
+}
+/* line 361, ../scss/style.scss */
+.headhesive .menu ul li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 364, ../scss/style.scss */
+.headhesive .menu ul li a {
+  color: white;
+}
+
+/* line 372, ../scss/style.scss */
+.headhesive--stick {
+  transition: 1s;
+  transform: translateY(0px);
+  display: flex;
+}
+/* line 376, ../scss/style.scss */
+.headhesive--stick .menu {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 14, ../scss/_media.scss */
+  .popup .content {
+    border-radius: 0px;
+    height: 100vh;
+  }
+  /* line 17, ../scss/_media.scss */
+  .popup .content box {
+    padding-right: 7%;
+    margin-left: 8%;
+  }
+
+  /* line 25, ../scss/_media.scss */
+  .toggle {
+    transition: 1s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    z-index: 99;
+    background-color: #7da80a;
+    border-radius: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* line 41, ../scss/_media.scss */
+  .toggle .line {
+    transition: 0.5s;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 3px;
+  }
+
+  /* line 52, ../scss/_media.scss */
+  .ToggleActive {
+    transition: 0.3s;
+    border-radius: 50px 50px 0px 0px;
+  }
+  /* line 55, ../scss/_media.scss */
+  .ToggleActive .line {
+    transition: 0.5s;
+    margin: 0;
+  }
+  /* line 59, ../scss/_media.scss */
+  .ToggleActive #L1 {
+    transform: rotate(45deg) translate(2px, 1px);
+  }
+  /* line 62, ../scss/_media.scss */
+  .ToggleActive #L2 {
+    height: 0;
+    width: 0;
+    transition: 1s;
+  }
+  /* line 67, ../scss/_media.scss */
+  .ToggleActive #L3 {
+    transform: rotate(-45deg);
+  }
+
+  /* line 72, ../scss/_media.scss */
+  .wr {
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+
+  /* line 76, ../scss/_media.scss */
+  h1 {
+    font-size: 20px;
+  }
+
+  /* line 79, ../scss/_media.scss */
+  h1::after {
+    width: 300px;
+  }
+
+  /* line 82, ../scss/_media.scss */
+  h2, h3 {
+    font-size: 18px;
+  }
+
+  /* line 85, ../scss/_media.scss */
+  h2::after, h3::after {
+    width: 0;
+  }
+
+  /* line 89, ../scss/_media.scss */
+  p {
+    padding: 5px;
+  }
+
+  /* line 94, ../scss/_media.scss */
+  section#main #logo {
+    width: 100px;
+    padding: 20px;
+  }
+  /* line 98, ../scss/_media.scss */
+  section#main .wr {
+    width: 100%;
+  }
+  /* line 100, ../scss/_media.scss */
+  section#main .wr .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+  /* line 106, ../scss/_media.scss */
+  section#main .wr .header .menu {
+    transition: 0.5s;
+    width: 230px;
+    height: 200px;
+    background-color: #7da80a;
+    display: flex;
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    z-index: 99;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    top: 70px;
+    right: 20px;
+    transition: display 2s;
+  }
+  /* line 122, ../scss/_media.scss */
+  section#main .wr .header .menu ul {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    background: #7da80a;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+  }
+  /* line 130, ../scss/_media.scss */
+  section#main .wr .header .menu ul li {
+    color: white;
+  }
+  /* line 132, ../scss/_media.scss */
+  section#main .wr .header .menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 4px 0px 4px 10px;
+  }
+  /* line 138, ../scss/_media.scss */
+  section#main .wr .header .menu ul li a:hover {
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+  }
+  /* line 146, ../scss/_media.scss */
+  section#main .wr .header .MenuActive {
+    display: flex;
+  }
+  /* line 151, ../scss/_media.scss */
+  section#main .box {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: auto;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 159, ../scss/_media.scss */
+  section#main .box .content {
+    display: flex;
+    font-family: "AvenirNext", sans-serif;
+    color: white;
+    font-size: 24px;
+    max-width: 550px;
+    text-align: center;
+  }
+  /* line 167, ../scss/_media.scss */
+  section#main .box img {
+    display: flex;
+    align-self: flex-end;
+    width: 75%;
+  }
+
+  /* line 174, ../scss/_media.scss */
+  section#about {
+    background: #f8f8f8;
+  }
+  /* line 176, ../scss/_media.scss */
+  section#about .wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* line 181, ../scss/_media.scss */
+  section#about .wr .box {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  /* line 184, ../scss/_media.scss */
+  section#about .wr .box img {
+    margin: 14px;
+    height: 120px;
+  }
+
+  /* line 191, ../scss/_media.scss */
+  section#services {
+    height: auto;
+  }
+  /* line 193, ../scss/_media.scss */
+  section#services .wr {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* line 197, ../scss/_media.scss */
+  section#services .wr h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  /* line 201, ../scss/_media.scss */
+  section#services .wr box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+  }
+  /* line 207, ../scss/_media.scss */
+  section#services .wr box img {
+    display: none;
+  }
+  /* line 210, ../scss/_media.scss */
+  section#services .wr box ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* line 217, ../scss/_media.scss */
+  section#services .wr box ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+
+  /* line 229, ../scss/_media.scss */
+  section#ourproduct {
+    background-color: #f8f8f8;
+  }
+  /* line 231, ../scss/_media.scss */
+  section#ourproduct .wr {
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+  /* line 237, ../scss/_media.scss */
+  section#ourproduct .wr box {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  /* line 242, ../scss/_media.scss */
+  section#ourproduct .wr box .item {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  /* line 248, ../scss/_media.scss */
+  section#ourproduct .wr box .item img {
+    margin: auto;
+    display: flex;
+    height: 135px;
+  }
+  /* line 253, ../scss/_media.scss */
+  section#ourproduct .wr box .item .btn2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+  }
+
+  /* line 265, ../scss/_media.scss */
+  section#ourlab .wr box box {
+    align-items: center;
+    width: 100%;
+    min-width: 0px;
+    justify-content: center;
+    text-align: center;
+  }
+  /* line 272, ../scss/_media.scss */
+  section#ourlab .wr box img {
+    height: 200px;
+  }
+  /* line 284, ../scss/_media.scss */
+  section#ourlab #PopupLabInfo .content box img {
+    width: 100%;
+  }
+
+  /* line 293, ../scss/_media.scss */
+  section#contacts {
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+  }
+  /* line 297, ../scss/_media.scss */
+  section#contacts .btn, section#contacts .btn2 {
+    margin-top: 20px;
+  }
+  /* line 300, ../scss/_media.scss */
+  section#contacts map {
+    width: 100%;
+  }
+  /* line 302, ../scss/_media.scss */
+  section#contacts map iframe {
+    border: 0;
+    width: 100%;
+    padding-top: 50px;
+    height: 500px;
+  }
+  /* line 309, ../scss/_media.scss */
+  section#contacts row {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  /* line 314, ../scss/_media.scss */
+  section#contacts row box h3 {
+    width: 100%;
+  }
+  /* line 317, ../scss/_media.scss */
+  section#contacts row box .item {
+    width: 100%;
+  }
+  /* line 319, ../scss/_media.scss */
+  section#contacts row box .item p {
+    margin: 0px;
+  }
+  /* line 326, ../scss/_media.scss */
+  section#contacts #PopupWriteUs .content {
+    height: 100vh;
+  }
+  /* line 328, ../scss/_media.scss */
+  section#contacts #PopupWriteUs .content box {
+    height: auto;
+  }
+  /* line 330, ../scss/_media.scss */
+  section#contacts #PopupWriteUs .content box form {
+    width: 95%;
+    margin: auto;
+  }
+  /* line 335, ../scss/_media.scss */
+  section#contacts #PopupWriteUs .content box form textarea {
+    height: 50vh;
+  }
+
+  /* line 344, ../scss/_media.scss */
+  ::-webkit-scrollbar {
+    width: 6px;
+    padding-right: 10px;
+  }
+
+  /* Track */
+  /* line 349, ../scss/_media.scss */
+  ::-webkit-scrollbar-track {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+  /* Handle */
+  /* line 354, ../scss/_media.scss */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    background: rgba(125, 168, 10, 0.6);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
