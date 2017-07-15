@@ -8,17 +8,6 @@ function Show($this) {
     $id = "Popup" + $this.id;
     //    alert($id);
 
-    ////Sets top position
-    if ($('body').width() < 960) {
-        $("#" + $id).css({
-            "top": $(window).scrollTop()
-        });
-    } else {
-        $("#" + $id).css({
-            "top": $(window).scrollTop() + 100
-        });
-    }
-
     ////Shows Popup
     $("#" + $id).css({
         "display": "flex"
@@ -68,7 +57,7 @@ $(document).ready(function () {
 
     if ($('body').width() > 960) {
         var options = {
-          offset: 700
+          offset: 600
         }
         var header = new Headhesive('.header', options);
 

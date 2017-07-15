@@ -11,39 +11,56 @@
 @media screen and (max-width: $maw) {
     /////////Popup
     .popup {
+        width: 100%;
+        margin: 0;
         .content {
             border-radius: 0px;
             height: 100vh;
-            box{
-                padding-right: 7%;
-                margin-left: 8%;
+            width: 100%;
+            .hide {
+                width: 23px;
+                min-height: 23px;
+            }
+            h1 {
+                margin: 0;
+                margin-bottom: 20px;
+                margin-bottom: 5px;
+            }
+            h1::after {
+                height: 3px;
+                width: 95%;
+            }
+            box {
+                padding-right: 8%;
+                margin-left: 4%;
+                width: 85%;
             }
         }
     }
     ///////////////////// 
     ////////Toggle
     .toggle {
-    transition: 1s;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    cursor: pointer;
-    z-index: 99;
-    background-color: $green;
-    border-radius: 100px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        transition: 1s;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
+        z-index: 99;
+        background-color: $green;
+        border-radius: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .line {
-                transition: 0.5s;
-                width: 20px;
-                height: 2px;
-                background-color: white;
-                margin: 3px;
+            transition: 0.5s;
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            margin: 3px;
             #L1 {}
             #L2 {}
             #L3 {}
@@ -57,7 +74,7 @@
             margin: 0;
         }
         #L1 {
-        transform: rotate(45deg) translate(2px, 1px);
+            transform: rotate(45deg) translate(2px, 1px);
         }
         #L2 {
             height: 0;
@@ -74,10 +91,10 @@
         padding-bottom: 20px;
     }
     h1 {
-        font-size: 20px;
+        font-size: 16px;
     }
     h1::after {
-        width: 300px;
+        width: 250px;
     }
     h2 {
         font-size: 18px;
@@ -85,8 +102,7 @@
     h2::after {
         width: 0;
     }
-    
-    p{
+    p {
         padding: 5px;
     }
     ////////////////
@@ -219,7 +235,7 @@
                         flex-direction: column;
                         align-items: center;
                         text-align: center;
-                        padding-bottom: 50px;
+                        padding-bottom: 14px;
                         width: 100%;
                     }
                 }
@@ -240,6 +256,8 @@
                 width: 100%;
                 margin-top: 30px;
                 .item {
+                    align-items: center;
+                    text-align: center;
                     width: 100%;
                     max-width: 450px;
                     display: flex;
@@ -253,7 +271,7 @@
                     .btn2 {
                         margin-top: 20px;
                         margin-bottom: 10px;
-                        padding: 2px;
+                        padding: 2px 15px;
                     }
                 }
             }
@@ -274,21 +292,18 @@
                 }
             }
         }
-    /////////////////PopupLabInfo
-        #PopupLabInfo{
-            .content{
-                h1{
-                    
-                }
-                box{
-                    img{
+        /////////////////PopupLabInfo
+        #PopupLabInfo {
+            .content {
+                h1 {}
+                box {
+                    img {
                         width: 100%;
                     }
                 }
             }
         }
-    /////////////////////////////
-        
+        /////////////////////////////
     }
     section#contacts {
         flex-direction: column;
@@ -302,38 +317,56 @@
             iframe {
                 border: 0;
                 width: 100%;
-                padding-top: 50px;
-                height: 500px;
+                padding-top: 40px;
+                height: 40vh;
             }
         }
         row {
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
-            padding: 10px;
+            margin-top: 15px;
             box {
-                h3 {
-                    width: 100%;
-                }
                 .item {
                     width: 100%;
+                    font-size: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 7px;
+                    text-align: center;
+                }
+                #mdcol {
+                    border: 0;
+                    padding: 0px;
+                }
+            }
+            #web {
+                a {
+                    text-transform: none;
                     p {
-                        margin: 0px;
+                        margin: 7px;
                     }
                 }
+            }
+            p {
+                margin: 7px;
+                padding: 0;
             }
         }
         #PopupWriteUs {
             .content {
                 height: 100vh;
                 box {
-                    height: auto;
+                    height: 80%;
+                    padding: 0px;
+                    margin: auto;
                     form {
                         width: 95%;
                         margin: auto;
                         .input {}
                         #text {}
-                        textarea{
-                            height: 50vh;
+                        textarea {
+                            height: 57vh;
                         }
                     }
                 }
