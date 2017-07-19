@@ -124,7 +124,7 @@ section#main {
             font-size: 24px;
             text-align: right;
             max-width: 550px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         img {
             min-width: 200px;
@@ -216,6 +216,7 @@ section#ourproduct {
                     margin: auto;
                     display: flex;
                     height: 135px;
+                    width: initial;
                 }
                 .btn2 {
                     margin-top: 20px;
@@ -243,7 +244,11 @@ section#ourlab {
                 align-items: center;
                 min-width: 580px;
                 justify-content: flex-start;
+                
             }
+                img{
+                    height: 380px;
+                }
         }
     }
 }

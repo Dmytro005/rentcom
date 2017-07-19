@@ -283,6 +283,8 @@ section#ourlab .wr {
       align-items: center;
       min-width: 580px;
       justify-content: flex-start; }
+    section#ourlab .wr box img {
+      height: 380px; }
 
 section#contacts {
   flex-direction: column;
