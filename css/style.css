@@ -256,7 +256,7 @@ section#ourproduct {
     padding: 50px; }
     section#ourproduct .wr box {
       justify-content: space-around;
-      align-items: center;
+      align-items: baseline;
       width: 100%;
       margin-top: 30px; }
       section#ourproduct .wr box .item {

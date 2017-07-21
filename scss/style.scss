@@ -201,11 +201,11 @@ section#ourproduct {
         align-items: center;
         justify-content: space-around;
         align-items: center;
-        padding: 50px;
+        padding: 50px; 
         box {
             @extend %flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: baseline;
             width: 100%;
             margin-top: 30px;
             .item {

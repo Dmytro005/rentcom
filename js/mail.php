@@ -11,5 +11,5 @@ $message = " $NameSurname \n $Text ";
 
 
 $pagetitle = "Нова заявка з сайту \"$sitename\" ";
-mail($recepient,$pagetitle,$messsage, $recepient");
+mail($recepient,$pagetitle,$messsage,"Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 ?>
