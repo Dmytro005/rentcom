@@ -58,6 +58,9 @@
             padding-right: 80px;
             margin-left: 93px;
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -74,6 +77,63 @@
 }
 
 ///////////////////// 
+.quote {
+    @extend p;
+    text-align: center;
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+    margin: 15px;
+    color: $green;
+}
+
+////Table Base
+$innerWidth: 1px;
+.table {
+    border: 1px solid $green;
+    border-radius: 20px;
+    padding: 5px;
+    max-width:500px;
+    table {
+        border-collapse: collapse;
+        tbody {
+            tr { 
+                td {
+                    @extend p;
+                    padding: 1px 5px;
+                    border-bottom: $innerWidth solid $green;
+                    border-collapse: collapse;
+                }
+                td:last-child {
+                    text-align: right;
+                }
+                td:first-child {
+                    border-right: $innerWidth solid $green;
+                }
+            }
+            tr:last-child {
+                td {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/////List Base
+.list {
+    @extend p;
+    margin-top: 0;
+    li {
+        margin: 15px;
+        color: $green;
+        span{
+            color: black;
+        }
+    }
+}
+
+////////////////////
 section#main {
     @extend %flex;
     height: 100vh;
@@ -129,6 +189,11 @@ section#main {
         img {
             min-width: 200px;
             width: 47%;
+        }
+    }
+    #PopupMoreinfo {
+        .content {
+            .moreinfo {}
         }
     }
 }
@@ -201,7 +266,7 @@ section#ourproduct {
         align-items: center;
         justify-content: space-around;
         align-items: center;
-        padding: 50px; 
+        padding: 50px;
         box {
             @extend %flex;
             justify-content: space-around;
@@ -244,14 +309,14 @@ section#ourlab {
                 align-items: center;
                 min-width: 580px;
                 justify-content: flex-start;
-                
             }
-                img{
-                    height: 380px;
-                }
+            img {
+                height: 380px;
+            }
         }
     }
 }
+
 section#contacts {
     @extend %flex;
     flex-direction: column;
@@ -294,7 +359,7 @@ section#contacts {
             #web {
                 a {
                     text-transform: none;
-                    p{
+                    p {
                         margin: auto;
                     }
                 }
@@ -310,6 +375,7 @@ section#contacts {
         .content {
             height: 560px;
             box {
+                display: block;
                 form {
                     display: flex;
                     flex-direction: column;

@@ -73,7 +73,7 @@ h3 {
 h3::after {
   width: 0; }
 
-p, section#contacts #copyright {
+p, .quote, .table table tbody tr td, .list, section#contacts #copyright {
   font-family: "AvenirNext", sans-serif;
   font-size: 16px;
   font-weight: 100;
@@ -153,7 +153,10 @@ p, section#contacts #copyright {
       overflow: auto;
       padding-right: 80px;
       margin-left: 93px;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
 
 .overlay {
   background: rgba(0, 0, 0, 0.67);
@@ -163,6 +166,40 @@ p, section#contacts #copyright {
   top: 0;
   width: 100%;
   height: 100%; }
+
+.quote {
+  text-align: center;
+  text-align: center;
+  font-style: italic;
+  font-weight: 100;
+  margin: 15px;
+  color: #7da80a; }
+
+.table {
+  border: 1px solid #7da80a;
+  border-radius: 20px;
+  padding: 5px;
+  max-width: 500px; }
+  .table table {
+    border-collapse: collapse; }
+    .table table tbody tr td {
+      padding: 1px 5px;
+      border-bottom: 1px solid #7da80a;
+      border-collapse: collapse; }
+    .table table tbody tr td:last-child {
+      text-align: right; }
+    .table table tbody tr td:first-child {
+      border-right: 1px solid #7da80a; }
+    .table table tbody tr:last-child td {
+      border-bottom: 0; }
+
+.list {
+  margin-top: 0; }
+  .list li {
+    margin: 15px;
+    color: #7da80a; }
+    .list li span {
+      color: black; }
 
 section#main {
   height: 100vh;
@@ -318,26 +355,28 @@ section#contacts {
         padding: 0px 90px; }
       section#contacts row box #web a {
         text-transform: none; }
-        section#contacts row box #web a p, section#contacts row box #web a #copyright {
+        section#contacts row box #web a p, section#contacts row box #web a .quote, section#contacts row box #web a .table table tbody tr td, .table table tbody tr section#contacts row box #web a td, section#contacts row box #web a .list, section#contacts row box #web a #copyright {
           margin: auto; }
   section#contacts #copyright {
     align-self: flex-start;
     padding: 10px; }
   section#contacts #PopupWriteUs .content {
     height: 560px; }
-    section#contacts #PopupWriteUs .content box form {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      section#contacts #PopupWriteUs .content box form .input {
-        border: 1px solid rgba(125, 168, 10, 0.6);
-        border-radius: 15px;
-        margin: 5px;
-        width: 98%;
-        padding: 6px;
-        font-family: "AvenirNext", sans-serif; }
-      section#contacts #PopupWriteUs .content box form #text {
-        resize: none; }
+    section#contacts #PopupWriteUs .content box {
+      display: block; }
+      section#contacts #PopupWriteUs .content box form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        section#contacts #PopupWriteUs .content box form .input {
+          border: 1px solid rgba(125, 168, 10, 0.6);
+          border-radius: 15px;
+          margin: 5px;
+          width: 98%;
+          padding: 6px;
+          font-family: "AvenirNext", sans-serif; }
+        section#contacts #PopupWriteUs .content box form #text {
+          resize: none; }
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -477,7 +516,7 @@ section#contacts {
   h2::after, h3::after {
     width: 0; }
 
-  p, section#contacts #copyright {
+  p, .quote, .table table tbody tr td, .list, section#contacts #copyright {
     padding: 5px; }
 
   section#main #logo {
@@ -664,9 +703,9 @@ section#contacts {
         padding: 0px; }
       section#contacts row #web a {
         text-transform: none; }
-        section#contacts row #web a p, section#contacts row #web a #copyright {
+        section#contacts row #web a p, section#contacts row #web a .quote, section#contacts row #web a .table table tbody tr td, .table table tbody tr section#contacts row #web a td, section#contacts row #web a .list, section#contacts row #web a #copyright {
           margin: 7px; }
-      section#contacts row p, section#contacts row #copyright {
+      section#contacts row p, section#contacts row .quote, section#contacts row .table table tbody tr td, .table table tbody tr section#contacts row td, section#contacts row .list, section#contacts row #copyright {
         margin: 7px;
         padding: 0; }
     section#contacts #PopupWriteUs .content {
