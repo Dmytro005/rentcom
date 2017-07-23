@@ -73,7 +73,7 @@ h3 {
 h3::after {
   width: 0; }
 
-p, .quote, .table table tbody tr td, .list, section#contacts #copyright {
+p, .table table tbody tr td, .list, section#contacts #copyright {
   font-family: "AvenirNext", sans-serif;
   font-size: 16px;
   font-weight: 100;
@@ -168,12 +168,21 @@ p, .quote, .table table tbody tr td, .list, section#contacts #copyright {
   height: 100%; }
 
 .quote {
+  align-items: center;
+  display: inline-block;
   text-align: center;
-  text-align: center;
-  font-style: italic;
-  font-weight: 100;
-  margin: 15px;
-  color: #7da80a; }
+  margin: 15px; }
+  .quote p, .quote .table table tbody tr td, .table table tbody tr .quote td, .quote .list, .quote section#contacts #copyright, section#contacts .quote #copyright {
+    font-style: italic;
+    margin: 16px;
+    color: #7da80a;
+    font-size: 18px;
+    height: auto;
+    position: relative;
+    margin: 0; }
+  .quote img {
+    width: 32px;
+    margin-bottom: 10px; }
 
 .table {
   border: 1px solid #7da80a;
@@ -355,7 +364,7 @@ section#contacts {
         padding: 0px 90px; }
       section#contacts row box #web a {
         text-transform: none; }
-        section#contacts row box #web a p, section#contacts row box #web a .quote, section#contacts row box #web a .table table tbody tr td, .table table tbody tr section#contacts row box #web a td, section#contacts row box #web a .list, section#contacts row box #web a #copyright {
+        section#contacts row box #web a p, section#contacts row box #web a .table table tbody tr td, .table table tbody tr section#contacts row box #web a td, section#contacts row box #web a .list, section#contacts row box #web a #copyright {
           margin: auto; }
   section#contacts #copyright {
     align-self: flex-start;
@@ -516,7 +525,7 @@ section#contacts {
   h2::after, h3::after {
     width: 0; }
 
-  p, .quote, .table table tbody tr td, .list, section#contacts #copyright {
+  p, .table table tbody tr td, .list, section#contacts #copyright {
     padding: 5px; }
 
   section#main #logo {
@@ -703,9 +712,9 @@ section#contacts {
         padding: 0px; }
       section#contacts row #web a {
         text-transform: none; }
-        section#contacts row #web a p, section#contacts row #web a .quote, section#contacts row #web a .table table tbody tr td, .table table tbody tr section#contacts row #web a td, section#contacts row #web a .list, section#contacts row #web a #copyright {
+        section#contacts row #web a p, section#contacts row #web a .table table tbody tr td, .table table tbody tr section#contacts row #web a td, section#contacts row #web a .list, section#contacts row #web a #copyright {
           margin: 7px; }
-      section#contacts row p, section#contacts row .quote, section#contacts row .table table tbody tr td, .table table tbody tr section#contacts row td, section#contacts row .list, section#contacts row #copyright {
+      section#contacts row p, section#contacts row .table table tbody tr td, .table table tbody tr section#contacts row td, section#contacts row .list, section#contacts row #copyright {
         margin: 7px;
         padding: 0; }
     section#contacts #PopupWriteUs .content {
