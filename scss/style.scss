@@ -61,6 +61,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: justify;
         }
     }
 }
@@ -82,14 +83,14 @@
     display: inline-block;
     text-align: center;
     margin: 15px;
-    p{
-    font-style: italic;
-    margin: 16px;
-    color: $green;
-    font-size: 18px;
-    height: auto;
-     position: relative;
-    margin: 0;
+    p {
+        font-style: italic;
+        margin: 16px;
+        color: $green;
+        font-size: 18px;
+        height: auto;
+        position: relative;
+        margin: 0;
     }
     img {
         width: 32px;
@@ -106,6 +107,7 @@ $innerWidth: 1px;
     max-width: 500px;
     table {
         border-collapse: collapse;
+        text-align: left;
         tbody {
             tr {
                 td {
@@ -134,15 +136,16 @@ $innerWidth: 1px;
 .list {
     @extend p;
     margin-top: 0;
+    list-style: circle;
     li {
-        margin: 15px;
+        margin: 12px;
         color: $green;
         span {
             color: black;
         }
     }
 }
-
+ 
 ////////////////////
 section#main {
     @extend %flex;
@@ -201,14 +204,13 @@ section#main {
             width: 47%;
         }
     }
-    #PopupMoreinfo {
-        .content {
-            .moreinfo {}
-        }
-    }
+
 }
 
 section#about {
+    h1{
+        margin: 0;
+    }
     @extend %flex;
     background: $grey;
     .wr {
@@ -217,12 +219,23 @@ section#about {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        .box {
-            @extend %flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-around;
-            padding: 40px;
+        img{
+            width: 180px;
+            height: 180px;
+                margin-top: 30px;
+        }
+        
+        p{
+                margin: 30px 0px;
+        }
+    }
+    #PopupMoreinfo{
+        .content{
+            .moreinfo{
+                .img{
+                    margin: 20px 0px;
+                } 
+            }
         }
     }
 }
@@ -257,7 +270,8 @@ section#services {
                 display: flex;
                 flex-direction: column;
                 li {
-                    padding-bottom: 40px;
+                    //                    padding-bottom: 40px;
+                    text-align: justify;
                 }
                 li:last-child {
                     padding: 0;
@@ -365,14 +379,6 @@ section#contacts {
                 border-left: 2px solid #eeefe7;
                 border-right: 2px solid #eeefe7;
                 padding: 0px 90px;
-            }
-            #web {
-                a {
-                    text-transform: none;
-                    p {
-                        margin: auto;
-                    }
-                }
             }
         }
     }
