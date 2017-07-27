@@ -371,6 +371,7 @@ section#contacts {
         border-right: 2px solid #eeefe7;
         padding: 0px 90px; }
   section#contacts #copyright {
+    font-size: 12px;
     align-self: flex-start;
     padding: 10px; }
   section#contacts #PopupWriteUs .content {

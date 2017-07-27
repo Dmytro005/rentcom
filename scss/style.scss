@@ -1,5 +1,6 @@
 @import "fonts";
 @import "settings";
+
 //$Avenir - main font
 //$green  - brand color
 //transperent
@@ -240,6 +241,7 @@ section#contacts {
     }
     #copyright {
         @extend p;
+        font-size: 12px;
         align-self: flex-start;
         padding: 10px;
     }
@@ -352,5 +354,4 @@ section#contacts {
 }
 
 headhesive--unstick {}
-
 @import "media";

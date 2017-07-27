@@ -33,7 +33,6 @@ function Hide() {
     });
 };
 
-
 $(".btn, .btn2").click(function () {
     Show(this);
 });
@@ -45,9 +44,7 @@ $(".overlay").click(function () {
 $(".hide").click(function () {
     Hide();
 });
-
 ///////////////////////////////////
-
 $(document).ready(function () {
     ///Gradualy scroll
 
@@ -57,52 +54,45 @@ $(document).ready(function () {
 
     if ($('body').width() > 960) {
         var options = {
-          offset: 600
+            offset: 600
         }
         var header = new Headhesive('.header', options);
 
-    }else{};
+    } else {};
 
 
-/////////////////
+    /////////////////
 
-//Form load
+//////Form 
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+        //E-mail Ajax Send
+        $("form").submit(function () { //Change
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "mail.php", //Change
+                data: th.serialize()
+            }).done(function () {
+                Hide();
+                alert("Ваш лист було успішно відправлено!");
+                setTimeout(function () {
+                    th.trigger("reset");
+                }, 1000);
+            });
+            return false;
+        });
 
-});
+    });
 
 
-/////////////////
+    /////////////////
 
 });
 ////////////////////////////////////
-/// Mobile menu toggle
+/////////Mobile menu toggle
 $('#toggle').click(function () {
     $(this).toggleClass('ToggleActive');
     $("#menu").toggleClass('MenuActive');
 });
-/////////ContactFormButton
-$("#ContactFormBtn").click(function () {
-    //        Hide();
-});
-//////////////////////////
-
-

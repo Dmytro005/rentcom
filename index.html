@@ -5,14 +5,11 @@
     <title>Rentkom</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="css/style.css">
-<!--    <link rel="stylesheet" href="css/style.min.css">-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <!--Animation Spoon    -->
-
-    <head>
-        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    </head>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -76,11 +73,13 @@
                         <p>
                             Наша компанія прагне досягти найкращих результатів, оптимально використовуючи людські та природні ресурси. В основі нашої діяльності – відповідальність за якість нашої роботи, дотримання корпоративних стандартів, економне та ефективне використання ресурсів. Ми відчуваємо відповідальність за тих, хто формує і забезпечує успіх нашої компанії. Разом ми робимо вагомий внесок у розвиток України. Діяльність компанії побудована на принципах розуміння та довіри до наших співробітників та партнерів. За півтора року діяльності компанія Рентком має ринки збуту як на території України, так і за кордоном. У склад агоропромислового комплексу входять два спеціалізовані агропромислові комплекси з переробки соєвих бобів. У вересні 2017 року ТОВ Рентком завершить модернізацію виробничих ліній на новому підприємстві у с. Дзвиняч, Тернопільської області.
                         </p>
+<!--
                         <h3>Наша команда</h3>
                         <div class="img">
                             <img src="img/section2/1.png" alt="">
                         </div>
                         <h3>Наші сертифікати</h3>
+-->
                         <br>
                     </box>
                 </div>
@@ -382,7 +381,7 @@
                 </box>
                 <!--            <p>ТзОВ"РЕНТКОМ"</p>-->
             </row>
-            <div id="copyright">ТзОВ"РЕНТКОМ"</div>
+            <div id="copyright">All rights reserved - Rentkom LLC - 2017</div>
 
             <!------------------------PopupWriteUs -------------------->
 
@@ -392,9 +391,16 @@
                     <h1>напишіть нам</h1>
                     <box>
                         <form id="form" method="post">
-                            <input class="input" id="email" placeholder="Email" name="Email" type="email" required>
-                            <input class="input" id="NameSurname" placeholder="Ім'я та Прізвище" name="NameSurname" type="name" required>
-                            <textarea class="input" name="text" id="text" placeholder="Текст" rows="14" required></textarea>
+
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="rentkom.com">
+                            <input type="hidden" name="admin_email" value="rentkomzvit@ukr.net">
+                            <input type="hidden" name="form_subject" value="ContactForm">
+                            <!-- END Hidden Required Fields -->
+
+                            <input name="Email" class="input" id="email" placeholder="Імейл" type="email" required>
+                            <input name="Імя та Прізвище" class="input" id="NameSurname" placeholder="Ім'я та Прізвище" type="name" required>
+                            <textarea name="Текст" class="input" id="text" placeholder="Текст" rows="14" required></textarea>
 
                             <button href="#contacts" class="btn" id="ContactFormBtn"> надіслати</button>
                         </form>
@@ -413,7 +419,8 @@
             new WOW().init();
 
         </script>
-        <script src="js/main.js"></script>
+        <script src="js/main.min.js"></script>
+<!--        <script src="js/main.js"></script>-->
         <!--Page Scroll Animation -->
         <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
         <!--       Scroll Animation -->
