@@ -61,7 +61,6 @@ h2, h3 {
 h2::after, h3::after {
   content: " ";
   display: block;
-  width: 400px;
   height: 1px;
   background: #7da80a; }
 
@@ -187,6 +186,7 @@ p, .table table tbody tr td, .list, section#contacts #copyright {
 
 .table {
   border: 1px solid #7da80a;
+  margin: 5px;
   border-radius: 20px;
   padding: 5px;
   max-width: 500px; }

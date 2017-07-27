@@ -68,16 +68,27 @@ $(document).ready(function () {
 
 //Form load
 
-$("#form").submit(function () {
-    $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: $(this).serialize()
-    }).done(function () {
-        alert("Дякую за заявку, ми з вами скоро зв'яжемось!");
-    });
-    return false;
+    $(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 });
+
 
 /////////////////
 
@@ -93,3 +104,5 @@ $("#ContactFormBtn").click(function () {
     //        Hide();
 });
 //////////////////////////
+
+
